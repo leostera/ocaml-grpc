@@ -1,0 +1,20 @@
+opam-version: "2.0"
+name: "httpaf-lwt"
+maintainer: "Antonio Monteiro <ostera@gmail.com>"
+authors: [ "Antonio Monteiro <ostera@gmail.com>" ]
+license: "BSD-3-clause"
+homepage: "https://github.com/ostera/grpc"
+bug-reports: "https://github.com/ostera/grpc/issues"
+dev-repo: "git+https://github.com/ostera/grpc.git"
+build: [
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "4.03.0"}
+  "faraday-lwt-unix"
+  "grpc"
+  "dune" {build}
+  "lwt"
+]
+synopsis: "Lwt support for http2/af"

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+name: "grpc-mirage"
+maintainer: "Antonio Nuno Monteiro <ostera@gmail.com>"
+authors: [ "Antonio Nuno Monteiro <ostera@gmail.com>" ]
+license: "BSD-3-clause"
+homepage: "https://github.com/ostera/grpc"
+dev-repo: "git+https://github.com/ostera/grpc.git"
+bug-reports: "https://github.com/ostera/grpc/issues"
+build: [
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "4.03.0"}
+  "faraday-lwt"
+  "grpc-lwt"
+  "dune" {build}
+  "lwt"
+  "mirage-conduit"
+  "cstruct"
+]
+synopsis: "Mirage support for http2/af"

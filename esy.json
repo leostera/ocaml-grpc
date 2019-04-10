@@ -6,18 +6,19 @@
   "license": "MIT",
   "repository": "git+https://github.com/ostera/grpcaf",
   "dependencies": {
-    "ocaml": " >= 4.3.0",
-    "@opam/dune": "*",
-    "@opam/lwt": "4.1.0",
-    "@opam/bigstringaf": "*",
+    "@esy-ocaml/reason": "^3.4.0",
     "@opam/angstrom": "*",
-    "@opam/faraday": "*",
-    "@opam/psq": "*",
-    "@opam/mirage-conduit": "*",
-    "@opam/faraday-lwt-unix": "*",
-    "@opam/lwt_ssl": "*",
+    "@opam/bigstringaf": "*",
     "@opam/conf-libev": "*",
-    "@opam/httpaf": "*"
+    "@opam/dune": "*",
+    "@opam/faraday": "*",
+    "@opam/faraday-lwt-unix": "*",
+    "@opam/httpaf": "*",
+    "@opam/lwt": "4.1.0",
+    "@opam/lwt_ssl": "*",
+    "@opam/mirage-conduit": "*",
+    "@opam/psq": "*",
+    "ocaml": " >= 4.3.0"
   },
   "devDependencies": {
     "@opam/alcotest": "*",
@@ -35,10 +36,7 @@
             "scope": "global",
             "val": "-I#{self.install / 'include'} $CFLAGS"
           },
-          "LDFLAGS": {
-            "scope": "global",
-            "val": "-L#{self.lib} $LDFLAGS"
-          }
+          "LDFLAGS": { "scope": "global", "val": "-L#{self.lib} $LDFLAGS" }
         }
       }
     },

@@ -13,6 +13,7 @@
     "@opam/dune": "*",
     "@opam/faraday": "*",
     "@opam/faraday-lwt-unix": "*",
+    "@opam/h2": "0.2.0",
     "@opam/httpaf": "*",
     "@opam/lwt": "4.1.0",
     "@opam/lwt_ssl": "*",
@@ -36,7 +37,10 @@
             "scope": "global",
             "val": "-I#{self.install / 'include'} $CFLAGS"
           },
-          "LDFLAGS": { "scope": "global", "val": "-L#{self.lib} $LDFLAGS" }
+          "LDFLAGS": {
+            "scope": "global",
+            "val": "-L#{self.lib} $LDFLAGS"
+          }
         }
       }
     },

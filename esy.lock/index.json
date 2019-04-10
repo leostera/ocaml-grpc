@@ -1,5 +1,5 @@
 {
-  "checksum": "7467611045909600a4bf0b370f62ffd7",
+  "checksum": "0b0dab5e32dfddb0ca7d596e3f4f38b8",
   "root": "grpc@link-dev:./esy.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#d488cd9321cd5036bd36ec96744ce78c5d45fc49@d41d8cd9": {
@@ -43,6 +43,7 @@
         "@opam/mirage-conduit@opam:3.1.0@8cff99f9",
         "@opam/lwt_ssl@opam:1.1.2@ac833920", "@opam/lwt@opam:4.1.0@4db5bd2a",
         "@opam/httpaf@github:inhabitedtype/httpaf:httpaf.opam#53042e5@d41d8cd9",
+        "@opam/h2@opam:0.2.0@62642b87",
         "@opam/faraday-lwt-unix@opam:0.7.0@b0dea04f",
         "@opam/faraday@opam:0.7.0@6026a81f",
         "@opam/dune@opam:1.9.0@a7408d38",
@@ -1931,6 +1932,34 @@
         "@opam/angstrom@opam:0.11.2@2e02b026"
       ]
     },
+    "@opam/hpack@opam:0.2.0@b2aebcf5": {
+      "id": "@opam/hpack@opam:0.2.0@b2aebcf5",
+      "name": "@opam/hpack",
+      "version": "opam:0.2.0",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/md5/c8/c883927ce8a9f3f7159ef7b20988f051#md5:c883927ce8a9f3f7159ef7b20988f051",
+          "archive:https://github.com/anmonteiro/ocaml-h2/releases/download/0.2.0/h2-0.2.0.tbz#md5:c883927ce8a9f3f7159ef7b20988f051"
+        ],
+        "opam": {
+          "name": "hpack",
+          "version": "0.2.0",
+          "path": "esy.lock/opam/hpack.0.2.0"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.7.1004@d41d8cd9", "@opam/faraday@opam:0.7.0@6026a81f",
+        "@opam/dune@opam:1.9.0@a7408d38",
+        "@opam/angstrom@opam:0.11.2@2e02b026",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.7.1004@d41d8cd9", "@opam/faraday@opam:0.7.0@6026a81f",
+        "@opam/angstrom@opam:0.11.2@2e02b026"
+      ]
+    },
     "@opam/hex@opam:1.4.0@f22c5e98": {
       "id": "@opam/hex@opam:1.4.0@f22c5e98",
       "name": "@opam/hex",
@@ -1983,6 +2012,42 @@
         "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": [ "ocaml@4.7.1004@d41d8cd9" ]
+    },
+    "@opam/h2@opam:0.2.0@62642b87": {
+      "id": "@opam/h2@opam:0.2.0@62642b87",
+      "name": "@opam/h2",
+      "version": "opam:0.2.0",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/md5/c8/c883927ce8a9f3f7159ef7b20988f051#md5:c883927ce8a9f3f7159ef7b20988f051",
+          "archive:https://github.com/anmonteiro/ocaml-h2/releases/download/0.2.0/h2-0.2.0.tbz#md5:c883927ce8a9f3f7159ef7b20988f051"
+        ],
+        "opam": {
+          "name": "h2",
+          "version": "0.2.0",
+          "path": "esy.lock/opam/h2.0.2.0"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.7.1004@d41d8cd9", "@opam/psq@opam:0.1.1@d63fffb0",
+        "@opam/httpaf@github:inhabitedtype/httpaf:httpaf.opam#53042e5@d41d8cd9",
+        "@opam/hpack@opam:0.2.0@b2aebcf5",
+        "@opam/faraday@opam:0.7.0@6026a81f",
+        "@opam/dune@opam:1.9.0@a7408d38",
+        "@opam/bigstringaf@opam:0.5.0@93c1ca28",
+        "@opam/angstrom@opam:0.11.2@2e02b026",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.7.1004@d41d8cd9", "@opam/psq@opam:0.1.1@d63fffb0",
+        "@opam/httpaf@github:inhabitedtype/httpaf:httpaf.opam#53042e5@d41d8cd9",
+        "@opam/hpack@opam:0.2.0@b2aebcf5",
+        "@opam/faraday@opam:0.7.0@6026a81f",
+        "@opam/bigstringaf@opam:0.5.0@93c1ca28",
+        "@opam/angstrom@opam:0.11.2@2e02b026"
+      ]
     },
     "@opam/fmt@opam:0.8.6@a06c130d": {
       "id": "@opam/fmt@opam:0.8.6@a06c130d",

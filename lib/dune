@@ -1,2 +1,3 @@
 (library
-  (name grpc))
+  (name grpc)
+  (libraries h2))

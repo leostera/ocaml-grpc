@@ -31,6 +31,31 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *---------------------------------------------------------------------------*/
 
-module Request = Request;
-module Response = Response;
-module Status = Status;
+type scheme = [ | `Http | `Https];
+
+type te = [ | `TE | `Trailers];
+
+type content_coding = [
+  | `Identity
+  | `Gzip
+  | `Deflate
+  | `Snappy
+  | `Custom(string)
+];
+
+type content_type_plus = [ | `Json | `Proto | `Custom(string)];
+
+type content_type = [ | `Standard | `Standard_plus(list(content_type_plus))];
+
+type time_unit =
+  | Hour
+  | Minute
+  | Second
+  | Millisecond
+  | Microsecond
+  | Nanosecond;
+
+type timeout = {
+  value: float,
+  time_unit,
+};

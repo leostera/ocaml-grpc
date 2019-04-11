@@ -1,3 +1,4 @@
 (library
   (name grpc)
+  (public_name grpc)
   (libraries h2))

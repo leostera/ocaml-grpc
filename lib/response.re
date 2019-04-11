@@ -31,9 +31,12 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *---------------------------------------------------------------------------*/
 
-type trailer = {
-  status: Status.t,
-  custom_metadata: string,
+module Trailer = {
+  type t = {
+    status: Status.t,
+    custom_metadata: string,
+  };
+  let create = (~status, custom_metadata) => {status, custom_metadata};
 };
 
 type header = {
@@ -46,7 +49,7 @@ type header = {
 
 type t = {
   header: option(header),
-  trailers: list(trailer),
+  trailers: list(Trailer.t),
 };
 
 let create =

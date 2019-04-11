@@ -75,9 +75,10 @@ module Status: {
 module Response: {
   type t;
 
-  type trailer = {
-    status: Status.t,
-    custom_metadata: string,
+  module Trailer: {
+    type t;
+
+    let create: (~status: Status.t, string) => t;
   };
 
   let create:
@@ -87,7 +88,7 @@ module Response: {
       ~message_encoding: option(Headers.content_coding)=?,
       ~message_accept_encoding: option(list(Headers.content_coding))=?,
       ~custom_metadata: option(string)=?,
-      list(trailer)
+      list(Trailer.t)
     ) =>
     t;
 };
